@@ -9,7 +9,7 @@
 //   const [dec, setDec] = useState('');
 //   const [fe, setFe] = useState(null);
 //   const [fd, setFd] = useState(null);
-//   const api = axios.create({ baseURL: 'http://localhost:3000', headers: { Authorization: `Bearer ${token}` } });
+//   const api = axios.create({ baseURL: 'https://ncsa-interview.onrender.com', headers: { Authorization: `Bearer ${token}` } });
 //   const log = (type, input, output) => {
 //     const rec = { user: { username }, type, input, output, timestamp: new Date().toISOString() };
 //     setInteractions([rec, ...interactions]);
@@ -43,8 +43,8 @@
 
 
 
-import React, { useState, useContext } from 'react';
 import axios from 'axios';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../AuthContext';
 export default function ChatPage() {
   const { token, username, interactions, setInteractions, logout } = useContext(AuthContext);
@@ -56,7 +56,7 @@ export default function ChatPage() {
   const [fd, setFd] = useState(null);
 
   const api = axios.create({ 
-    baseURL: 'http://localhost:3000', 
+    baseURL: 'https://ncsa-interview.onrender.com', 
     headers: { Authorization: `Bearer ${token}` } 
   });
 

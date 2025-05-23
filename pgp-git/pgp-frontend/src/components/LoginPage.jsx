@@ -1,5 +1,5 @@
-import React, { useState, useContext } from 'react';
 import axios from 'axios';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../AuthContext';
 import SignupPage from './SignupPage';
 export default function LoginPage() {
@@ -8,7 +8,7 @@ export default function LoginPage() {
   const [mode, setMode] = useState('login');
   const { login } = useContext(AuthContext);
   const handleLogin = async () => {
-    const r = await axios.post('http://localhost:3000/api/auth/login', { username, password });
+    const r = await axios.post('https://ncsa-interview.onrender.com/api/auth/login', { username, password });
     login(r.data.token, r.data.username);
   };
   if (mode === 'signup') return <SignupPage onDone={() => setMode('login')} />;

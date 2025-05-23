@@ -1,5 +1,5 @@
-import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
+import React, { createContext, useEffect, useState } from 'react';
 export const AuthContext = createContext();
 export function AuthProvider({ children }) {
   const [token, setToken] = useState(localStorage.getItem('token'));
@@ -7,7 +7,7 @@ export function AuthProvider({ children }) {
   const [interactions, setInteractions] = useState([]);
   useEffect(() => {
     if (token) {
-      axios.get('http://localhost:3000/api/auth/interactions', { headers: { Authorization: `Bearer ${token}` } })
+      axios.get('https://ncsa-interview.onrender.com/api/auth/interactions', { headers: { Authorization: `Bearer ${token}` } })
         .then(r => setInteractions(r.data))
         .catch(console.error);
     }

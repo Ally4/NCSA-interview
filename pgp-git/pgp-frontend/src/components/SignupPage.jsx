@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
 import axios from 'axios';
+import React, { useState } from 'react';
 export default function SignupPage({ onDone }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const handleSignup = async () => {
-    await axios.post('http://localhost:3000/api/auth/signup', { username, password });
+    await axios.post('https://ncsa-interview.onrender.com/api/auth/signup', { username, password });
     alert('Signup successful');
     onDone();
   };

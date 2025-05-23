@@ -17,5 +17,10 @@
     "multer": "^1.4.4",
     "nodemon": "^3.1.10",
     "openpgp": "^5.10.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.27.2",
+    "@babel/core": "^7.27.1",
+    "@babel/preset-env": "^7.27.2"
   }
 }
