@@ -1,0 +1,324 @@
+/* :root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+
+body {
+  margin: 0;
+  padding: 0;
+  /* font-family: Arial, sans-serif;
+  background: #f2f2f2; */
+}
+
+
+
+/* Flex container */
+/* .mainsignup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 20px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+/* .mainsignup {
+  display: flex;
+  justify-content: center;
+  background-color: green;
+}
+
+.mainsignup1 {
+  justify-content: center;
+  background-color: green;
+}
+
+.mainsignup2 {
+  justify-content: center;
+  background-color: green;
+}
+
+.mainsignup3 {
+  justify-content: center;
+}
+
+.mainsignup4 {
+  justify-content: center;
+}
+
+.mainsignup5 {
+  justify-content: center;
+} */
+
+
+
+
+
+
+
+/* Container - centers the form */
+.mainsignup {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+}
+
+/* Form box */
+.mainsignup1 {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Header */
+.mainsignup2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #334e68;
+}
+
+/* Input fields */
+.mainsignup3, .mainsignup4 {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.2s ease;
+}
+
+.mainsignup3:focus, .mainsignup4:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Button */
+.mainsignup5 {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.mainsignup5:hover {
+  background-color: #3b7dd8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Overall layout container */
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f4f7fa;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  gap: 20px;
+}
+
+/* Optional header/sidebar */
+.main1 {
+  background: #334e68;
+  height: 60px;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Interaction history container */
+.main2 {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  max-height: 300px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Each interaction entry */
+.main3 {
+  padding: 10px;
+  border-left: 4px solid #4a90e2;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+/* Metadata of interaction */
+.main4 {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+/* Tools section (encryption/decryption) */
+.main5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  color: #3b7dd8;
+  flex-direction: row;
+}
+
+/* Textareas */
+.main6, .main9 {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.main7, .main10, .main12, .main13 {
+  padding: 10px 14px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.main7:hover, .main10:hover, .main12:hover, .main13:hover {
+  background-color: #3b7dd8;
+}
+
+/* Output areas */
+.main8, .main11 {
+  background-color: #eef1f5;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  white-space: pre-wrap;
+  font-size: 14px;
+  color: #333;
+}
+
+.main14 {
+  color: black;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .main5 {
+    grid-template-columns: 1fr;
+  }
+}
