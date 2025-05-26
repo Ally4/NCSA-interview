@@ -2,9 +2,6 @@ app = "my-node-backend" # Your Fly.io app name
 
 primary_region = "iad"  # Closest region to your users (e.g., iad = Washington, D.C.)
 
-[build]
-  dockerfile = "Dockerfile"  # Use a Dockerfile to build your backend
-
 [env]
   NODE_ENV = "production"
   PORT = "1234"  # Must match the port your app listens on
