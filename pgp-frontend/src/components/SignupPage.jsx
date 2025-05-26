@@ -4,7 +4,7 @@ export default function SignupPage({ onDone }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const handleSignup = async () => {
-    await axios.post('https://ncsa-interview.onrender.com/api/auth/signup', { username, password });
+    await axios.post('https://ncsa-interview.fly.dev//api/auth/signup', { username, password });
     alert('Signup successful');
     onDone();
   };
