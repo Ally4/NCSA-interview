@@ -1,0 +1,5 @@
+{
+    "version": 2,
+    "build":[{"pgp-git":"./server.js", "use":"@vercel/node"}],
+    "routes": [{"pgp-git":"/(.*)", "dest":"/"}]
+}
