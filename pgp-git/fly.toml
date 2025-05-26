@@ -7,10 +7,10 @@ primary_region = "iad"  # Closest region to your users (e.g., iad = Washington, 
 
 [env]
   NODE_ENV = "production"
-  PORT = "3000"  # Must match the port your app listens on
+  PORT = "1234"  # Must match the port your app listens on
 
 [[services]]
-  internal_port = 3000
+  internal_port = 1234
   protocol = "tcp"
 
   [[services.ports]]
