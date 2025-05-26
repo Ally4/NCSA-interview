@@ -20,6 +20,14 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error(err));
 
+
+
+// Serve interactions
+app.get('/api/welcome', async (req, res) => {
+  res.status(200).json({ message: 'NCSA is top' });
+});
+
+
 // Auth API
 app.use('/api/auth', authRoutes);
 
@@ -165,6 +173,14 @@ app.get('/api/interactions', protect, async (req, res) => {
   const ints = await Interaction.find().populate('user','username').sort('-timestamp');
   res.json(ints);
 });
+
+
+
+// Serve interactions
+app.get('/', protect, async (req, res) => {
+  res.status(200).json({ message: 'NCSA is top' });
+});
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
