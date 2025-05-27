@@ -8,7 +8,7 @@ export default function LoginPage() {
   const [mode, setMode] = useState('login');
   const { login } = useContext(AuthContext);
   const handleLogin = async () => {
-    const r = await axios.post('https://ncsa-interview.fly.dev//api/auth/login', { username, password });
+    const r = await axios.post('http://localhost:1234/api/auth/login', { username, password });
     login(r.data.token, r.data.username);
   };
   if (mode === 'signup') return <SignupPage onDone={() => setMode('login')} />;

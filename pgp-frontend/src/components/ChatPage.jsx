@@ -11,7 +11,7 @@ export default function ChatPage() {
   const [fd, setFd] = useState(null);
 
   const api = axios.create({ 
-    baseURL: 'https://ncsa-interview.fly.dev/', 
+    baseURL: 'http://localhost:1234/', 
     headers: { Authorization: `Bearer ${token}` } 
   });
 

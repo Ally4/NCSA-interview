@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { generateKeys } from '../pgp/keys.js'; // adjust path if needed
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -25,7 +24,7 @@ const run = async () => {
   fs.writeFileSync(path.join(keysDir, 'publicKey.asc'), publicKey, 'utf8');
   fs.writeFileSync(path.join(keysDir, 'privateKey.asc'), privateKey, 'utf8');
 
-  console.log('✅ PGP keys generated and saved to /keys');
+  console.log('PGP keys generated and saved to /keys');
 };
 
 run();

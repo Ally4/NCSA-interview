@@ -7,7 +7,7 @@ export function AuthProvider({ children }) {
   const [interactions, setInteractions] = useState([]);
   useEffect(() => {
     if (token) {
-      axios.get('https://ncsa-interview.fly.dev//api/auth/interactions', { headers: { Authorization: `Bearer ${token}` } })
+      axios.get('http://localhost:1234/api/auth/interactions', { headers: { Authorization: `Bearer ${token}` } })
         .then(r => setInteractions(r.data))
         .catch(console.error);
     }
